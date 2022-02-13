@@ -20,7 +20,8 @@ echo "Copying catalogue content"
 cp -r catalogue-main /home/roboshop/catalogue &>>$LOG_FILE
 
 echo "Install Nodejs dependencies"
-npm install --unsafe-perm=true
+cd /home/roboshop/catalogue
+npm install
 
 
 
