@@ -17,10 +17,10 @@ echo "Download schema"
 curl -s -L -o /tmp/mongodb.zip "https://github.com/roboshop-devops-project/mongodb/archive/main.zip" &>>$LOG_FILE
 
 echo "Extract schema"
-cd /tmp
+cd /tmp/
 unzip -o mongodb.zip &>>$LOG_FILE
 
 echo "Load schema"
-cd mongodb-main
+cd mongodb-main/
 mongo < catalogue.js &>>$LOG_FILE
 mongo < users.js &>>$LOG_FILE
