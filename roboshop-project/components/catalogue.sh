@@ -14,13 +14,13 @@ curl -s -L -o /tmp/catalogue.zip "https://github.com/roboshop-devops-project/cat
 
 echo "Extract catalogue code"
 cd /tmp/
-unzip /tmp/catalogue.zip
+unzip /tmp/catalogue.zip &>>$LOG_FILE
 
 echo "Copying catalogue content"
-cp -r catalogue-main /home/roboshop/catalogue
+cp -r catalogue-main /home/roboshop/catalogue &>>$LOG_FILE
 
 echo "Install Nodejs dependencies"
-npm install
+npm install --unsafe-perm=true
 
 
 
