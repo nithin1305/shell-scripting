@@ -21,7 +21,7 @@ cp -r catalogue-main /home/roboshop/catalogue &>>$LOG_FILE
 
 echo "Install Nodejs dependencies"
 cd /home/roboshop/catalogue
-npm install
+npm install &>>$LOG_FILE
 
 
 
