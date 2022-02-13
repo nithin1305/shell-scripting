@@ -46,7 +46,7 @@ echo "Download frontend repo"
 curl -s -L -o /tmp/frontend.zip "https://github.com/roboshop-devops-project/frontend/archive/main.zip" &>>$LOG_FILE
 
 echo "Clean old content"
-rm rf /usr/share/nginx/html/*
+rm -rf /usr/share/nginx/html/*
 
 echo "Extract frontend content"
 cd /usr/share/nginx/html/ &>>$LOG_FILE
